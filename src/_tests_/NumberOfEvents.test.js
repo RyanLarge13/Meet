@@ -1,6 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import NumberOfEvents from "../components/NumberOfEvents";
+import { mockData } from "../mock_data.js";
 
 describe("<NumberOfEvents /> component", () => {
   let NumberOfEventsWrapper;
@@ -14,7 +15,7 @@ describe("<NumberOfEvents /> component", () => {
 
   //I need help on this one... Not sure how to do this one right...
   test("Checking for the change in number of events within the text box", () => {
-    const number = NumberOfEventsWrapper.prop("number");
+    const number = mockData.length;
     expect(NumberOfEventsWrapper.prop("number")).toBe(number);
   });
 });
